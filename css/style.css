@@ -141,6 +141,9 @@ h1, h2, h3, h4, h5, h6, p {
 .link-transition:hover {
     color: #177de4;
 }
+.gray-bg {
+    background: #f2f2f6;
+}
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -800,7 +803,6 @@ h1, h2, h3, h4, h5, h6, p {
 /* PARTNERS */
 
 .partners {
-    background-color: #fafafb;
     padding: 133px 0 105px;
 }
 .partners__title {
@@ -1004,5 +1006,202 @@ h1, h2, h3, h4, h5, h6, p {
 .contacts-intro-col__item a {
     text-decoration: none;
     color: #3c98f6;
+}
+
+/* PAGE ABOUT */
+
+.about {
+    position: relative;
+    overflow: hidden;
+    padding: 132px 0 97px;
+}
+.about-pic {
+    position: absolute;
+    bottom: -235px;
+    right: -173px;
+}
+
+.about__title {
+    margin-bottom: 20px;
+}
+.about-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.about-list__item {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    background: #f2f2f6;
+    padding: 26px 24px;
+}
+.about-list__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 17px;
+    border: 10px solid transparent;
+    border-left: 10px solid #3c98f6;
+    border-top: 10px solid #3c98f6;
+    transition: .3s linear;
+}
+.about-list__icon {
+    margin-bottom: 40px;
+}
+.about-list__number {
+    font-weight: 800;
+    font-size: 77px;
+    line-height: 100%;
+    color: #3c98f6;
+    margin-bottom: 10px;
+}
+.about-list__text {
+    font-size: 18px;
+    font-weight: 800;
+}
+.managers {
+    position: relative;
+    padding: 168px 0 114px;
+    z-index: 10;
+}
+.managers::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 290px;
+    height: 560px;
+    background-color: #ffffff;
+    z-index: -1;
+}
+.managers::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: 455px;
+    height: 406px;
+    background-color: #ffffff;
+    z-index: -1;
+}
+.managers-content {
+    display: flex;
+    justify-content: space-between;
+}
+.managers-content__text {
+    width: 100%;
+    max-width: 675px;
+}
+.managers__title {
+    margin-bottom: 93px; 
+}
+.managers-content {
+    display: flex;
+    align-items: center;
+}
+.section-subtitle {
+    font-size: 32px;
+    font-weight: 700;
+}
+.managers__subtitle {
+    margin-bottom: 26px;
+}
+.managers-list {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    line-height: 33px;
+    margin-bottom: 33px;
+}
+.managers-list__item {
+    position: relative;
+    padding-left: 30px;
+}
+.managers-list__item::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 18px;
+    height: 17px;
+    border: 10px solid transparent;
+    border-left: 10px solid #3c98f6;
+    border-top: 10px solid #3c98f6;
+    transition: .3s linear;
+}
+.managers-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.managers-content__pic {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 413px;
+}
+.managers-content__pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 40px -40px 0 #3c98f6;
+}
+.managers-content__pic-text {
+    margin-top: 25px;
+}
+.managers-content__pic-text-name {
+    font-weight: 700;
+}
+.managers-content__pic-text-descr {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.certificates {
+    margin-top: 130px;
+}
+.certificates__titel {
+    margin-bottom: 65px;
+}
+.certificates-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.certificates-list__item {
+    width: 22%;
+}
+.certificates-list__item img {
+    width: 100%;
+    height: auto;
+}
+
+.spec-tech {
+    padding: 133px 0 120px;
+}
+.spec-tech__title {
+    margin-bottom: 55px;
+}
+.spec-tech-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.spec-tech-list__item {
+    width: 32%;
+    padding: 20px 18px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.spec-tech-list__item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
