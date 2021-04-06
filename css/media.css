@@ -10,6 +10,17 @@
     .intro-order::before {
         width: 53%;
     }
+    .about {
+        padding: 90px 0 90px;
+    }
+}
+@media (max-width: 1200px) {
+    .about-list__item {
+        max-width: 300px;
+    }
+    .managers-content__text {
+        max-width: 540px;
+    }
 }
 @media (max-width: 1024px) {
     body {
@@ -24,6 +35,7 @@
     }
     .mobile-menu {
         display: block;
+        box-shadow: 0 1px 8px rgb(0 0 0 / 20%);
     }
     .intro {
         padding: 50px 0 120px;
@@ -85,8 +97,10 @@
         height: auto;
         display: block;
     }
-    .section-subtittle {
+    .section-subtittle,
+    .section-subtitle {
         font-size: 22px;
+        line-height: 26px;
     }
     .why {
         padding: 100px 0 82px;
@@ -155,6 +169,39 @@
     .footer__callback {
         align-items: flex-end;
     }
+    .managers {
+        padding: 80px 0 80px;
+    }
+    .managers-content {
+        flex-wrap: wrap;
+    }
+    .managers-text {
+        margin-bottom: 65px;
+    }
+    .managers-content__text {
+        max-width: 100%;
+    }
+    .managers-content__pic {
+        margin: 0 auto;
+    }
+    .certificates {
+        margin-top: 90px;
+    }
+    .certificates-list {
+        flex-wrap: wrap;
+    }
+    .certificates-list__item {
+        width: 28%;
+        margin-bottom: 20px;
+    }
+    .about-list {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 35px;
+    }
+    .about-list__item {
+        margin-bottom: 30px;
+    }
 }
 @media (max-width: 768px) {
     .intro__title, 
@@ -195,6 +242,27 @@
         min-width: auto;
         width: 100%;
     }
+    .about-list__number {
+        font-size: 35px;
+    }
+    .about-list__text {
+        font-size: 14px;
+    }
+    .about-list__icon {
+        margin-bottom: 20px;
+    }
+    .spec-tech-list__item {
+        width: 48%;
+    }
+    .managers {
+        padding: 80px 0 0px;
+    }
+    .managers__title {
+        margin-bottom: 30px;
+    }
+    .spec-tech {
+        padding: 80px 0 80px;
+    }
 }
 @media (max-width: 660px) {
     body {
@@ -204,6 +272,10 @@
     .section-title {
         font-size: 20px;
         line-height: 28px;
+    }
+    .section-subtitle {
+        font-size: 18px;
+        line-height: 22px;
     }
     .mobile-menu .logo {
         width: 80px;
@@ -282,6 +354,40 @@
         padding: 10px 10px;
         font-size: 12px;
     }
+    .about {
+        padding: 65px 0 65px;
+    }
+    .about-pic {
+        display: none;
+    }
+    .managers-text {
+        font-size: 14px;
+    }
+    .certificates {
+        margin-top: 40px;
+    }
+    .certificates__titel {
+        margin-bottom: 45px;
+    }
+    .certificates-list__item {
+        width: 48%;
+    }
+    .managers-content__pic {
+        max-width: 95%;
+    }
+    .managers-content__pic img {
+        box-shadow: 15px -15px 0 #3c98f6;
+    }
+    .spec-tech {
+        padding: 65px 0 65px;
+    }
+    .spec-tech-list {
+        justify-content: space-around;
+    }
+    .spec-tech-list__item {
+        width: 100%;
+        padding: 10px 10px;
+    }
 }
 @media (max-width: 375px) {
     .intro__title, .intro__subtitle {
@@ -313,5 +419,8 @@
     }  
     .footer .contact-link {
         font-size: 16px;
+    }
+    .form-button {
+        font-size: 12px;
     }
 }
