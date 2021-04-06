@@ -2,6 +2,9 @@
     .add-to-favorites {
         display: none;
     }
+    .contacts-intro__pic {
+        display: none;
+    }
 }
 @media (max-width: 1440px) {
     .container {
@@ -202,6 +205,24 @@
     .about-list__item {
         margin-bottom: 30px;
     }
+    .contacts-intro {
+        padding: 80px 0 65px;
+    }
+    .contacts-intro::before, 
+    .contacts-intro::after {
+        top: 180px;
+        height: 700px;
+    }
+    .contacts-intro-col__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .contacts-intro-col__item {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 768px) {
     .intro__title, 
@@ -262,6 +283,17 @@
     }
     .spec-tech {
         padding: 80px 0 80px;
+    }
+    .contacts-intro-col__title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .contacts-intro-col__title {
+        margin-bottom: 20px;
+    }
+    .contacts-intro::before, 
+    .contacts-intro::after {
+        top: 200px;
     }
 }
 @media (max-width: 660px) {
@@ -388,6 +420,30 @@
         width: 100%;
         padding: 10px 10px;
     }
+    .contacts-intro__content {
+        flex-wrap: wrap;
+    }
+    .contacts-intro-col {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .contacts-intro-col:last-child {
+        margin-bottom: 0;
+    }
+    .contacts-intro::before,
+    .contacts-intro::after {
+        display: none;
+    }
+    .contacts-intro-col__item {
+        font-size: 14px;
+    }
+    .contacts-intro__text {
+        margin-bottom: 40px;
+    }
+    .contacts-intro-col__title {
+        font-size: 18px;
+        line-height: 20px;
+    }
 }
 @media (max-width: 375px) {
     .intro__title, .intro__subtitle {
@@ -422,5 +478,8 @@
     }
     .form-button {
         font-size: 12px;
+    }
+    .contacts-intro {
+        padding: 65px 0 65px;
     }
 }
