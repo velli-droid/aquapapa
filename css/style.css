@@ -1876,6 +1876,172 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 32px;
 }
 
+/* VIDEO */
+
+.video {
+    padding: 230px 0 108px;
+}
+.video__inner {
+    position: relative;
+}
+.montage-form {
+    position: absolute;
+    top: -450px;
+    left: 0;
+}
+.montage-form .consultation {
+    justify-content: center;
+}
+.montage-form .consultation .form-submit {
+    width: 35%;
+    margin-left: 19px;
+}
+.montage-form .consultation-form__subtitle {
+    max-width: none;
+}
+.video-list {
+    display: flex;
+    justify-content: space-between;
+}
+.video-list__item {
+    width: 49%;
+    max-width: 570px;
+    padding: 30px 21px 21px;
+    background: #fff;
+}
+.video-list__title {
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 700;
+    padding-left: 13px;
+    margin-bottom: 19px;
+}
+.video-list__text {
+    font-size: 19px;
+    line-height: 32px;
+    padding-left: 13px;
+    margin-bottom: 21px;
+}
+.video-list__pic {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.video-list-play-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 78px;
+    height: 75px;
+    background-color: #3c98f6;
+    transition: .3s linear;
+}
+.video-list-play-btn__icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.video-list__pic .video-list-play-btn__icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+}
+.video-list__pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.video-list__link:hover .video-list-play-btn {
+    background: #177de4;
+}
+
+/* CONTRACT */
+
+.contract {
+    position: relative;
+    padding: 130px 0 97px;
+}
+.contract::before {
+    content: "";
+    position: absolute;
+    top: 340px;
+    left: 0;
+    width: 35%;
+    height: 536px;
+    background-color: #f2f2f6;
+    z-index: -1;
+}
+.contract__title {
+    margin-bottom: 75px;
+}
+
+.contract-text__title,
+.contract-text__subtitle {
+    line-height: 48px;
+}
+.contract-content {
+    display: flex;
+    justify-content: space-between;
+}
+.contract-text {
+    width: 50%;
+    max-width: 520px;
+}
+.contract-text__title {
+    margin-bottom: 73px;
+}
+.contract-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 78px;
+}
+.contract-list__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.contract-list__item:last-child {
+    margin-bottom: 0;
+}
+.contract-list__icon {
+    margin-right: 19px;
+}
+.contract-list__text {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+}
+.contract-text-btn {
+    margin-top: 30px;
+}
+.contract-pic {
+    position: relative;
+    padding: 20px 15px;
+    background: #f2f2f6;
+    z-index: 1;
+}
+.contract-pic::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: -70px;
+    width: 100%;
+    height: 427px;
+    background-color: #f2f2f6;
+    z-index: -1;
+}
+.contract-pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.contract-form {
+    margin-top: 220px;
+}
+
 /* RELATED PRODUCTS */
 
 .related-products {
