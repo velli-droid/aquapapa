@@ -1,5 +1,317 @@
+@media (max-width: 1625px) {
+    .add-to-favorites {
+        display: none;
+    }
+}
 @media (max-width: 1440px) {
     .container {
         max-width: 1200px;
+    }
+    .intro-order::before {
+        width: 53%;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 18px;
+        line-height: 120%;
+    }
+    .header-top {
+        display: none;
+    }
+    .header-bottom {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .intro {
+        padding: 50px 0 120px;
+    }
+    .intro__title,
+    .intro__subtitle {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .intro-order__title {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .intro-location__icon {
+        max-width: 30px;
+    }
+    .intro-location__icon img {
+        width: 100%;
+        height: auto;
+    }
+    .intro-location__text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .intro-order__btn-link {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+    .intro-order::before {
+        bottom: 75px;
+        width: 55%;
+    }
+    .intro__pic {
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+    .section-title {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .services {
+        padding: 100px 0 100px;
+    }
+    .services-list {
+        justify-content: space-around;
+    }
+    .services-list-item {
+        margin-bottom: 20px;
+    }
+    .services-list-item__title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .services__bg-pic {
+        width: 65%;
+    }
+    .services__bg-pic img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .section-subtittle {
+        font-size: 22px;
+    }
+    .why {
+        padding: 100px 0 82px;
+    }
+    .why-list__item {
+        width: 28%;
+        margin-bottom: 25px;
+    }
+    .consultation {
+        width: 60%;
+        min-width: 650px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .consultation .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+    } 
+    .consultation .form-submit {
+        width: 100%;
+    }
+    .checkbox-label__text {
+        text-align: left;
+    }
+    .partners {
+        padding: 90px 0 90px;
+    }
+    .partners-list {
+        justify-content: space-around;
+    }
+    .partners-list__item {
+        margin-bottom: 20px;
+    }
+    .section-contacts {
+        padding: 100px 0 100px;
+    }
+    .section-contacts__inner {
+        flex-wrap: wrap;
+    }
+    .section-contacts-col {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+    .question-form {
+        width: 60%;
+        min-width: 650px;
+        margin: 0 auto;
+    }
+    .section-contacts-col___title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .footer__innrer {
+        flex-wrap: wrap;
+    }
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+    .footer-contacts {
+        align-items: flex-start;
+    }
+    .footer__callback {
+        align-items: flex-end;
+    }
+}
+@media (max-width: 768px) {
+    .intro__title, 
+    .intro__subtitle {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .intro__title {
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+    .intro__subtitle {
+        max-width: 435px;
+    }
+    .intro-location {
+        margin-top: 15px;
+    }
+    .intro-location__icon {
+        max-width: 25px;
+    }
+    .intro-location__text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .intro-order {
+        margin-top: 40px;
+    }
+    .intro-order__title {
+        font-size: 22px;
+    }
+    .intro-order::before {
+        width: 75%;
+        bottom: 80px;
+        height: 190px;
+    }
+    .consultation,
+    .question-form {
+        min-width: auto;
+        width: 100%;
+    }
+}
+@media (max-width: 660px) {
+    body {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .section-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .mobile-menu .logo {
+        width: 80px;
+    }
+    .line-above-title::before {
+        height: 3px;
+    }
+    .intro {
+        padding: 50px 0 100px;
+    }
+    .intro__title, .intro__subtitle {
+        font-size: 23px;
+        line-height: 27px;
+    }
+    .intro-order__title {
+        font-size: 20px;
+        max-width: 400px;
+    }
+    .intro-order::before {
+        width: 100%;
+        bottom: 60px;
+    }
+    .intro-order__btn-link {
+        font-size: 12px;
+    }
+    .intro__pic {
+        display: none;
+    }
+    .services__bg-pic {
+        display: none;
+    }
+    .consultation-form {
+        padding: 40px 20px 40px;
+    }
+    .consultation-form__title {
+        font-size: 25px;
+    }
+    .form-input {
+        font-size: 14px;
+        padding: 14px 14px;
+    }
+    .form-label {
+        top: 17px;
+        left: 14px;
+        font-size: 14px;
+    }
+    .form-button {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 14px;
+    }
+    .checkbox-label {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .why-list__item {
+        min-width: 160px;
+    }
+    .why__text {
+        line-height: 25px;
+    }
+    .section-contacts {
+        padding: 70px 0 40px;
+    }
+    .section-contacts__map {
+        height: 300px;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .footer__callback {
+        align-items: flex-start;
+    }
+    .footer-btn__link {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 375px) {
+    .intro__title, .intro__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .intro-location {
+        margin-top: 30px;
+    }
+    .consultation-form {
+        padding: 20px 10px 20px;
+    }
+    .consultation-form__title {
+        font-size: 20px;
+    }
+    .consultation-form__text {
+        line-height: 20px;
+    }
+    .intro-order {
+        margin-top: 65px;
+    }
+    .intro-order__title {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .why__text, 
+    .partners__text {
+        line-height: 20px;
+    }  
+    .footer .contact-link {
+        font-size: 16px;
     }
 }
