@@ -671,7 +671,10 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+}
+.why-list__icon img {
+    margin-bottom: auto;
+    margin-top: auto;
 }
 .why-list__num {
     font-size: 55px;
@@ -687,6 +690,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     margin-top: 32px;
     font-size: 15px;
+    max-width: 190px;
 }
 .why-list__text::before {
     content: "";
@@ -719,6 +723,7 @@ h1, h2, h3, h4, h5, h6, p {
 .consultation-form__text {
     color: #fff;
     margin-bottom: 29px;
+    line-height: 28px;
 }
 .consultation {
     display: flex;
@@ -807,7 +812,15 @@ h1, h2, h3, h4, h5, h6, p {
 /* PARTNERS */
 
 .partners {
+    position: relative;
     padding: 133px 0 105px;
+    z-index: 1;
+}
+.partners__pic {
+    position: absolute;
+    bottom: -160px;
+    right: -170px;
+    z-index: -1;
 }
 .partners__title {
     margin-bottom: 18px;
@@ -815,6 +828,7 @@ h1, h2, h3, h4, h5, h6, p {
 .partners__text {
     max-width: 895px;
     margin-bottom: 60px;
+    line-height: 32px;
 }
 .partners-list {
     display: flex;
@@ -1395,7 +1409,16 @@ h1, h2, h3, h4, h5, h6, p {
 /* PRODUCTS */
 
 .products {
+    position: relative;
+    overflow: hidden;
     padding: 90px 0;
+    z-index: 1;
+}
+.products-pic {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -170px;
 }
 .products__title {
     margin-bottom: 48px;
@@ -2049,4 +2072,174 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .related-products__title {
     margin-bottom: 38px;
+}
+
+
+/* PAGE DRILLING */
+
+.second-intro__title.drilling-intro__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+.drilling-intro__location {
+    margin-bottom: 29px;
+}
+.drilling-intro__list {
+    margin-bottom: 42px;
+}
+
+/* drilling info */
+
+.drilling-info {
+    padding: 90px 0;
+}
+.drilling-info__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drilling-info__pic {
+    width: 40%;
+    max-width: 427px;
+}
+.drilling-info__pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 41px -41px 0 #3c98f6;
+}
+.drilling-info__text {
+    width: 55%;
+}
+.drilling-info__title {
+    margin-bottom: 28px;
+}
+.drilling-info__subtitle {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 41px;
+}
+.drilling-info__descr {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+
+/* drilling products */
+
+.drilling-products {
+    position: relative;
+}
+.drilling-products-pic {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    max-width: 600px;
+}
+.drilling-products-pic img {
+    width: 100%;
+    height: auto;
+}
+.drilling-products .products-list-card__title {
+    font-size: 24px;
+    line-height: 25px;
+}
+.drilling-products .products-list-cards {
+    justify-content: center;
+}
+.drilling-products .products-list-card:nth-child(2n) {
+    margin: 0 30px 30px;
+}
+.drilling-products .products-list-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.drilling-products .products-list-card__btn-link {
+    display: block;
+    text-align: center;
+}
+
+
+/* drilling montage */
+
+.drilling-montage .montage-list__text {
+    font-size: 20px;
+}
+.drilling-montage .montage-list__icon {
+    display: flex;
+    align-items: center;
+}
+.drilling-montage .montage-list__icon span {
+    margin: 0 5px;
+}
+
+/* drill-services */
+
+.drill-services {
+    padding-bottom: 231px;
+}
+.drill-services__title {
+    margin-bottom: 67px;
+}
+.drill-services .drill-services-list__icon {
+    margin-bottom: 18px;
+}
+.drill-services .recommendation-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.drill-services .recommendation-list__item::after {
+    border-right: 70px solid #3c98f6;
+    border-top: 40px solid #3c98f6;
+}
+.drill-services-list-btn {
+    margin-top: 28px;
+}
+.drill-services-list-btn__link {
+    display: block;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+/* drilling form */
+
+.drilling-why.why {
+    padding-top: 0;
+    overflow: visible;
+}
+.drilling-form .consultation {
+    justify-content: center;
+}
+.drilling-form {
+    transform: translateY(-110px);
+}
+.drilling-form .form-submit {
+    width: 45%;
+    margin-left: 20px;
+}
+
+/* drilling spec tech */
+
+.drilling-spec-tech {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.drilling-spec-tech-pic {
+    position: absolute;
+    bottom: 141px;
+    left: -304px;
+}
+
+.drilling-guarantee-form {
+    padding: 85px 0;
+}
+.drilling-guarantee-form .consultation-form__subtitle {
+    max-width: none;
 }
