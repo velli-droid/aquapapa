@@ -149,7 +149,6 @@
         margin-bottom: 25px;
     }
     .consultation {
-        width: 60%;
         min-width: 650px;
         margin: 0 auto;
         flex-direction: column;
@@ -312,6 +311,62 @@
     } 
     .discount .form-submit {
         margin-left: 0;
+    } 
+    .differences-table-wrapper {
+        overflow-x: auto;
+    }
+    .products-list__subtitle {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .products-pic {
+        display: none;
+    }
+    .products-list__guarantee {
+        padding: 30px;
+    }
+    .products-list__guarantee-text {
+        font-size: 25px;
+        line-height: 30px;
+        min-width: 150px;
+    }
+    .products-list__guarantee-years {
+        font-size: 25px;
+        line-height: 28px;
+    }
+    .products-list__guarantee-num {
+        font-size: 45px;
+    }
+    .montage-form .consultation .form-submit {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .montage-form {
+        top: -620px;
+    }
+    .products-list-cards {
+        justify-content: space-around;
+    }
+    .video {
+        padding: 370px 0 108px;
+    } 
+    .related-products__title {
+        margin-bottom: 10px;
+    }
+    .contract-content {
+        flex-wrap: wrap;
+    }
+    .contract-text {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .contract-pic {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .partners__pic {
+        display: none;
     }
 }
 @media (max-width: 768px) {
@@ -402,6 +457,57 @@
     }
     .drilling-products-pic {
         display: none;
+    }
+    .consequence-warning {
+        position: static;
+        bottom: auto;
+        left: auto;
+    }
+    .consequence-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+    }
+    .consequence-list__item {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    .consequence-list__item:last-child {
+        margin-bottom: 0;
+    }
+    .consequence-list__item:nth-child(1) {
+        margin-top: 0;
+    }
+    .consequence-list__item:nth-child(3) {
+        margin-top: 0;
+    }
+    .video-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .video-list__item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .video-list__item:last-child {
+        margin-bottom: 0;
+    }
+    .contract-pic {
+        width: 70%;
+    }
+    .products-list__title {
+        flex-wrap: wrap;
+    }
+    .products-list__type {
+        padding-right: 0;
+        border: none;
+    }
+    .products-list__guarantee {
+        margin-left: auto;
+        margin-top: 20px;
+    }
+    .recommendation__subtitle {
+        font-size: 25px;
     }
 }
 @media (max-width: 660px) {
@@ -588,7 +694,68 @@
         font-size: 20px;
         line-height: 25px;
     }
-
+    .products-list__subtitle {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .products-list__descr {
+        line-height: 25px;
+    }
+    .products-list__guarantee {
+        padding: 20px;
+    }
+    .products-list__guarantee-text {
+        font-size: 18px;
+        line-height: 20px;
+        min-width: 110px;
+    }
+    .products-list__guarantee-years {
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .products-list__guarantee-num {
+        font-size: 35px;
+    }
+    .consequence__text {
+        margin-bottom: 30px;
+    }
+    .consequence-list__item {
+        width: 100%;
+    }
+    .consequence-warning {
+        padding: 35px;
+    }
+    .consequence-warning__title {
+        font-size: 25px;
+    }
+    .video-list__title {
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+    .video-list__text {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .video-list-play-btn {
+        width: 50px;
+        height: 50px;
+    }
+    .contract::before {
+        display: none;
+    }
+    .contract-pic::before {
+        display: none;
+    }
+    .contract-pic {
+        width: 100%;
+    }
+    .consequence-warning__text {
+        line-height: 20px;
+    }
+    .contract-form {
+        margin-top: 80px;
+    }
 }
 @media (max-width: 425px) {
     .second-intro-consultation__link {
@@ -597,6 +764,27 @@
     }
     .second-intro {
         padding: 50px 0 50px;
+    }
+    .products-list-card__btn-link {
+        font-size: 12px;
+    }
+    .products-list-card__price {
+        font-size: 20px;
+    }
+    .products-list-card__descr {
+        font-size: 14px;
+    }
+    .consultation-form__title {
+        font-size: 23px;
+    }
+    .consultation-form__small-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 auto 20px;
+    }
+    .consultation-form__subtitle {
+        font-size: 18px;
+        line-height: 22px;
     }
 }
 @media (max-width: 375px) {
