@@ -5,6 +5,9 @@
     .contacts-intro__pic {
         display: none;
     }
+    .drilling-spec-tech-pic {
+        display: none;
+    }
 }
 @media (max-width: 1440px) {
     .container {
@@ -16,6 +19,15 @@
     .about {
         padding: 90px 0 90px;
     }
+    .discount-form__inner::before {
+        display: none;
+    }
+    .discount-form .consultation-form::after {
+        display: none;
+    }
+    .discount-form__text {
+        display: none;
+    }
 }
 @media (max-width: 1200px) {
     .about-list__item {
@@ -23,6 +35,30 @@
     }
     .managers-content__text {
         max-width: 540px;
+    }
+    .drilling-products .products-list-cards {
+        justify-content: space-around;
+    }
+    .drilling-products .products-list-card:nth-child(2n) {
+        margin: 0 0 30px;
+    }
+    .products-list-card {
+        min-width: 370px;
+    }
+    .montage-list {
+        justify-content: space-around;
+    }
+    .montage-list__item::after {
+        display: none;
+    }
+    .montage-list__item:nth-child(4) {
+        order: 3;
+    }
+    .montage-list__item:nth-child(5) {
+        order: 2;
+    }
+    .montage-list__item:nth-child(6) {
+        order: 1;
     }
 }
 @media (max-width: 1024px) {
@@ -124,6 +160,7 @@
     } 
     .consultation .form-submit {
         width: 100%;
+        margin-left: 0;
     }
     .checkbox-label__text {
         text-align: left;
@@ -223,10 +260,64 @@
         line-height: 25px;
         margin-bottom: 20px;
     }
+    .second-intro__title.drilling-intro__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .second-intro-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .second-intro-list__item {
+        margin-bottom: 20px;
+        width: 40%;
+        min-width: 380px;
+    }
+    .second-intro-list__item:last-child {
+        margin-bottom: 0;
+    }
+    .drilling-info__inner {
+        flex-wrap: wrap;
+    }
+    .drilling-info__text {
+        order: 1;
+        width: 100%;
+    }
+    .drilling-info__pic {
+        order: 2;
+        width: 100%;
+        max-width: 500px;
+        margin: 65px auto 0;
+    }
+    .recommendation-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .recommendation-list__item {
+        min-width: 370px;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .recommendation-list__item:last-child {
+        margin-bottom: 0;
+    }
+    .discount {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .discount .form-group {
+        width: 100%;
+        margin-bottom: 30px;
+    } 
+    .discount .form-submit {
+        margin-left: 0;
+    }
 }
 @media (max-width: 768px) {
     .intro__title, 
-    .intro__subtitle {
+    .intro__subtitle,
+    .second-intro__title {
         font-size: 28px;
         line-height: 32px;
     }
@@ -240,17 +331,24 @@
     .intro-location {
         margin-top: 15px;
     }
-    .intro-location__icon {
+    .intro-location__icon,
+    .second-intro-location__icon {
         max-width: 25px;
     }
-    .intro-location__text {
+    .second-intro-location__icon img {
+        width: 100%;
+        height: auto;
+    }
+    .intro-location__text,
+    .second-intro-location__text {
         font-size: 16px;
         line-height: 20px;
     }
     .intro-order {
         margin-top: 40px;
     }
-    .intro-order__title {
+    .intro-order__title,
+    .second-intro-consultation__title {
         font-size: 22px;
     }
     .intro-order::before {
@@ -295,6 +393,16 @@
     .contacts-intro::after {
         top: 200px;
     }
+    .discount {
+        width: 100%;
+    }
+    .second-intro-consultation__link {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    .drilling-products-pic {
+        display: none;
+    }
 }
 @media (max-width: 660px) {
     body {
@@ -318,11 +426,15 @@
     .intro {
         padding: 50px 0 100px;
     }
-    .intro__title, .intro__subtitle {
+    .intro__title, 
+    .intro__subtitle,
+    .second-intro__title,
+    .second-intro__title.drilling-intro__title {
         font-size: 23px;
         line-height: 27px;
     }
-    .intro-order__title {
+    .intro-order__title,
+    .second-intro-consultation__title {
         font-size: 20px;
         max-width: 400px;
     }
@@ -444,6 +556,48 @@
         font-size: 18px;
         line-height: 20px;
     }
+    .second-intro-consultation__text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .second-intro-list__item {
+        width: 85%;
+        min-width: 280px;
+        margin-bottom: 15px;
+    }
+    .products-list-card {
+        width: 100%;
+        max-width: 460px;
+        min-width: 200px;
+    }
+    .drilling-montage .montage-list__text,
+    .montage-list__text {
+        font-size: 15px;
+    }
+    .montage-list__item {
+        width: 300px;
+    }
+    .montage-list-btn__link {
+        font-size: 12px;
+    }
+    .recommendation-list__item {
+        min-width: 250px;
+        width: 100%;
+    }
+    .recommendation-list__title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+}
+@media (max-width: 425px) {
+    .second-intro-consultation__link {
+        padding: 12px 15px;
+        font-size: 10px;
+    }
+    .second-intro {
+        padding: 50px 0 50px;
+    }
 }
 @media (max-width: 375px) {
     .intro__title, .intro__subtitle {
@@ -481,5 +635,8 @@
     }
     .contacts-intro {
         padding: 65px 0 65px;
+    }
+    .montage-list__item {
+        margin-bottom: 85px;
     }
 }

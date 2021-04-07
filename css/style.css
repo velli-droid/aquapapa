@@ -1473,6 +1473,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .discount-form {
     padding: 75px 0;
+    overflow: hidden
 }
 .discount-form__inner {
     position: relative;
