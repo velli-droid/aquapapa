@@ -762,6 +762,25 @@
     .video-popup__wrapper {
         padding: 0;
     }
+    .popup-form__title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .popup-form__content .form-label {
+        top: 13px;
+    }
+    .popup-wrapper {
+        padding: 50px 15px 40px;
+    }
+    .popup-form-phone {
+        font-size: 18px;
+        line-height: 34px;
+        text-align: center;
+        margin: 20px auto 0;
+    }
+    .popup-form-phone__link {
+        font-size: 30px;
+    }
 }
 @media (max-width: 425px) {
     .second-intro-consultation__link {

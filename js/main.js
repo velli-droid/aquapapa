@@ -42,6 +42,21 @@ function mobileMenu() {
 }
 mobileMenu();
 
+// EMAIL VALIDATE
+let validateEmail = function(email) {
+	let re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+	return re.test(String(email).toLowerCase());
+}
+
+// PHONE MASK
+let elementsWithMask = document.getElementsByClassName('imaskjs__input_tel');
+for (let i = 0; i < elementsWithMask.length; i++) {
+  new IMask(elementsWithMask[i], {
+    mask: '+{7}(000)000-00-00',
+  });
+}
+
+
 // popups
 
 function togglePopupActive(popup) {

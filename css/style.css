@@ -431,6 +431,7 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: 20;
     transform: translateX(100%);
     transition: .3s linear;
+    overflow: scroll;
 }
 .jump-menu.jump-menu_active {
     transform: translateX(0);
@@ -889,6 +890,9 @@ h1, h2, h3, h4, h5, h6, p {
     outline: none;
     font-size: 17px;
     padding: 17px 18px;
+}
+.form-input.input_invalidated {
+    border: 1px solid #f94141;
 }
 .form-label {
     position: absolute;
@@ -2437,6 +2441,7 @@ th {
     display: none;
     opacity: 0;
     transition: .3s linear;
+    overflow: scroll;
 }
 .page-popup.popup_fade {
     display: block;
