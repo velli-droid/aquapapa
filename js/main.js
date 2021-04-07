@@ -41,3 +41,50 @@ function mobileMenu() {
 	}
 }
 mobileMenu();
+
+// popups
+
+function togglePopupActive(popup) {
+	popup.classList.toggle('popup_active')
+}
+function togglePopupFade(popup) {
+	popup.classList.toggle('popup_fade')
+}
+function showPopup(popup) {
+	togglePopupFade(popup);
+	setTimeout(togglePopupActive, 200, popup);
+	let closePopupBtn = popup.querySelector('.popup-close-btn');
+	closePopupBtn.onclick = function() {
+		hidePopup(popup);
+	}
+	window.onclick = function(event) {
+		if(event.target === popup) {
+			hidePopup(popup);
+		}
+	}
+}
+function hidePopup(popup) {
+	togglePopupActive(popup);
+	setTimeout(togglePopupFade, 200, popup);
+}
+
+let formPopup = document.querySelector('.popup-form');
+let showPopupLinks = [...document.querySelectorAll('.show-popup__link')];
+
+showPopupLinks.forEach(el => {
+	el.onclick = function(event) {
+		event.preventDefault();
+		showPopup(formPopup);
+	}
+});
+
+let privacyPolicyPopup = document.querySelector('.popup-privacy-policy');
+let showPrivacyPolicyPopupLinks = [...document.querySelectorAll('.privacy-policy-popup__link')];
+
+showPrivacyPolicyPopupLinks.forEach(el => {
+	el.onclick = function(event) {
+		event.preventDefault();
+		showPopup(privacyPolicyPopup);
+	}
+});
+

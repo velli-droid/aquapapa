@@ -2380,3 +2380,125 @@ th {
 .drilling-guarantee-form .consultation-form__subtitle {
     max-width: none;
 }
+
+/* popups */
+
+.page-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: none;
+    opacity: 0;
+    transition: .3s linear;
+}
+.page-popup.popup_fade {
+    display: block;
+}
+.page-popup.popup_active {
+    opacity: 1;
+}
+.popup-wrapper {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 765px;
+    margin: 60px auto;
+    padding: 50px 48px 40px;
+    border-radius: 5px;
+    transition: .3s linear;
+    transform: translateY(-200%);
+}
+.popup_active .popup-wrapper {
+    transform: translateY(0);
+}
+.popup-close-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+}
+.popup-title {
+    font-weight: 700;
+    text-align: center;
+}
+.popup-form__title {
+    font-size: 26px;
+    line-height: 34px;
+    max-width: 510px;
+    margin: 0 auto 33px;
+}
+.popup-form-phone {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 47px;
+    max-width: 380px;
+    margin: 40px auto 0;
+}
+.popup-form-phone__link {
+    text-decoration: none;
+    color: #2a2a2a;
+    font-size: 41px;
+}
+
+.popup-form__content .consultation {
+    flex-direction: column;
+    width: 100%;
+    max-width: 366px;
+    margin: 0 auto;
+}
+.popup-form__content .consultation .form-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.popup-form__content .consultation .form-submit {
+    width: 100%;
+}
+.popup-form__content .checkbox-label__text {
+    color: #2a2a2a;
+    font-size: 11px;
+}
+.popup-form__content .checkbox-label__text a {
+    text-decoration: underline;
+}
+.popup-form__content .form-input {
+    border: none;
+    background-color: #f1f3f5;
+}
+.popup-form__content .form-label {
+    top: 16px;
+    font-weight: 500;
+}
+.popup-privacy-policy__text {
+    height: 436px;
+    overflow: auto;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+}
+.popup-privacy-policy__title {
+    margin-bottom: 21px;
+}
+.popup-privacy-policy__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 11px;
+}
+
+.popup-success__wrapper {
+    padding: 137px 80px 141px;
+}
+
+.popup-success__text {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.popup-success__text span {
+    font-size: 35px;
+}
