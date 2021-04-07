@@ -21,3 +21,23 @@ function rudr_favorite(a) {
 	}
 	return false;
 }
+
+// mobile menu
+
+function mobileMenu() {
+	let body = document.querySelector('body');
+	let mobileMenu = document.querySelector('.mobile-menu');
+	let jumpMenu = mobileMenu.querySelector('.jump-menu');
+	let burgerBtn = mobileMenu.querySelector('.burger-menu');
+	let menuCloseBtn = mobileMenu.querySelector('.jump-menu__close');
+
+	burgerBtn.onclick = function() {
+		jumpMenu.classList.add('jump-menu_active');
+		body.classList.add('no-scroll');
+	}
+	menuCloseBtn.onclick = function() {
+		jumpMenu.classList.remove('jump-menu_active');
+		body.classList.remove('no-scroll');
+	}
+}
+mobileMenu();
