@@ -65,7 +65,6 @@ if(forms.length) {
 		let formSubmitBtn = el.querySelector('.form-button');
 		let formCheckbox = el.querySelector('.form-checkbox');
 		formSubmitBtn.onclick = function(event) {
-			event.preventDefault();
 			for(let input of formInputs) {
 				switch (input.getAttribute('name')) {
 					case 'userEmail':
@@ -93,6 +92,10 @@ if(forms.length) {
 				if(!formCheckbox.checked) {
 					formCheckbox.classList.add('input_invalidated')
 				}
+			} 
+			let invalidatedInput = el.querySelector('.input_invalidated');
+			if(invalidatedInput) {
+				event.preventDefault();
 			}
 		}
 	})
