@@ -23,9 +23,9 @@ function rudr_favorite(a) {
 }
 
 // mobile menu
+let body = document.querySelector('body');
 
 function mobileMenu() {
-	let body = document.querySelector('body');
 	let mobileMenu = document.querySelector('.mobile-menu');
 	let jumpMenu = mobileMenu.querySelector('.jump-menu');
 	let burgerBtn = mobileMenu.querySelector('.burger-menu');
@@ -56,6 +56,49 @@ for (let i = 0; i < elementsWithMask.length; i++) {
   });
 }
 
+// form validation
+
+let forms = [...document.querySelectorAll('form')];
+if(forms.length) {
+	forms.forEach(el => {
+		let formInputs = [...el.querySelectorAll('.form-input')];
+		let formSubmitBtn = el.querySelector('.form-button');
+		let formCheckbox = el.querySelector('.form-checkbox');
+		formSubmitBtn.onclick = function(event) {
+			event.preventDefault();
+			for(let input of formInputs) {
+				switch (input.getAttribute('name')) {
+					case 'userEmail':
+						if(!validateEmail(input.value)) {
+							input.classList.add('input_invalidated');
+						}
+						break;
+					case 'userPhone': 
+						if(input.value.length < 16) {
+							input.classList.add('input_invalidated');
+						}
+						break;	
+					default:
+						if(!input.value) {
+							input.classList.add('input_invalidated');
+						}
+						break;
+				}
+				input.onfocus = function() {
+					input.classList.remove('input_invalidated');
+				}
+				formCheckbox.onclick = () => {
+					formCheckbox.classList.remove('input_invalidated')
+				}
+				if(!formCheckbox.checked) {
+					formCheckbox.classList.add('input_invalidated')
+				}
+			}
+		}
+	})
+}
+
+
 
 // popups
 
@@ -66,8 +109,15 @@ function togglePopupFade(popup) {
 	popup.classList.toggle('popup_fade')
 }
 function showPopup(popup) {
+	let pagePupups = [...document.querySelectorAll('.page-popup')];
+	for(let item of pagePupups) {
+		if(item.classList.contains('popup_active')) {
+			hidePopup(item)
+		}
+	}
 	togglePopupFade(popup);
 	setTimeout(togglePopupActive, 200, popup);
+	body.classList.add('no-scroll');
 	let closePopupBtn = popup.querySelector('.popup-close-btn');
 	closePopupBtn.onclick = function() {
 		hidePopup(popup);
@@ -79,6 +129,7 @@ function showPopup(popup) {
 	}
 }
 function hidePopup(popup) {
+	body.classList.remove('no-scroll');
 	togglePopupActive(popup);
 	setTimeout(togglePopupFade, 200, popup);
 }

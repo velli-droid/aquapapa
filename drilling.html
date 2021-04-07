@@ -349,7 +349,7 @@
                     </div>
                     <form action="send.php" method="POST" class="discount">
                         <div class="form-group">
-                            <input type="text" class="form-input" id="discountPhone" placeholder=" ">
+                            <input type="text" name="userPhone" class="form-input imaskjs__input_tel" id="discountPhone" placeholder=" ">
                             <label for="discountPhone" class="form-label">Введите ваш телефон:</label>
                         </div>
                         <div class="form-submit">
@@ -747,7 +747,7 @@
                     </div>
                     <form action="send.php" method="POST" class="consultation">
                         <div class="form-group">
-                            <input type="text" class="form-input" id="drillingPhone" placeholder=" ">
+                            <input type="text" name="userPhone" class="form-input imaskjs__input_tel" id="drillingPhone" placeholder=" ">
                             <label for="drillingPhone" class="form-label">Введите ваш телефон:</label>
                         </div>
                         <div class="form-submit">
@@ -955,11 +955,11 @@
                     </div>
                     <form action="send.php" method="POST" class="consultation">
                         <div class="form-group">
-                            <input type="text" class="form-input" id="consName" placeholder=" ">
+                            <input type="text" name="userName" class="form-input" id="consName" placeholder=" ">
                             <label for="consName" class="form-label">Введите ваше имя:</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" id="consPhone" placeholder=" ">
+                            <input type="text" name="userPhone" class="form-input imaskjs__input_tel" id="consPhone" placeholder=" ">
                             <label for="consPhone" class="form-label">Введите ваш телефон:</label>
                         </div>
                         <div class="form-submit">
@@ -1008,15 +1008,15 @@
                     </div>
                     <form method="POST" action="send.php" class="question-form">
                         <div class="form-group">
-                            <input type="text" class="form-input" id="questionName" placeholder=" ">
+                            <input type="text" name="userName" class="form-input" id="questionName" placeholder=" ">
                             <label for="questionName" class="form-label">Введите ваше имя:</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" id="questionEmail" placeholder=" ">
+                            <input type="text" name="userEmail" class="form-input" id="questionEmail" placeholder=" ">
                             <label for="questionEmail" class="form-label">Введите ваш E-mail:</label>
                         </div>
                         <div class="form-group">
-                            <textarea name="question-textarea" class="form-input" id="userQuestion" cols="30" rows="5" placeholder=" "></textarea>
+                            <textarea name="userMessage" class="form-input" id="userQuestion" cols="30" rows="5" placeholder=" "></textarea>
                             <label for="userQuestion" class="form-label">Опишите Ваш вопрос:</label>
                         </div>
                         <div class="form-privacy-policy">
@@ -1126,11 +1126,11 @@
             <div class="popup-form__content">
                 <form action="send.php" method="POST" class="consultation">
                     <div class="form-group">
-                        <input type="text" class="form-input" id="popupName" placeholder=" ">
+                        <input type="text" name="userName" class="form-input" id="popupName" placeholder=" ">
                         <label for="popupName" class="form-label">Введите ваше имя:</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-input" id="popupPhone" placeholder=" ">
+                        <input name="userPhone" type="text" class="form-input imaskjs__input_tel" id="popupPhone" placeholder=" ">
                         <label for="popupPhone" class="form-label">Введите ваш телефон:</label>
                     </div>
                     <div class="form-submit">
@@ -1140,8 +1140,8 @@
                     </div>
                     <div class="form-privacy-policy">
                         <div class="form-privacy-policy__checkbox">
-                            <input type="checkbox" class="form-checkbox" id="drillingPrivacyPolicyAgreement" checked>
-                            <label for="drillingPrivacyPolicyAgreement" class="checkbox-label">
+                            <input type="checkbox" class="form-checkbox" id="popupPrivacyPolicyAgreement" checked>
+                            <label for="popupPrivacyPolicyAgreement" class="checkbox-label">
                                 <div class="checkbox-label__area">
                                     <img src="img/checked.svg" alt="">
                                 </div>
@@ -1224,7 +1224,7 @@
             </div>
         </div>
     </div>
-    <script src="js/main.js"></script>
     <script src="https://unpkg.com/imask"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
