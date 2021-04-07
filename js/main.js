@@ -88,3 +88,20 @@ showPrivacyPolicyPopupLinks.forEach(el => {
 	}
 });
 
+// viseo popup
+
+let videoPopup = document.querySelector('.video-popup');
+if(videoPopup) {
+	let videoPopupIframe = videoPopup.querySelector('.responsive-iframe');
+	let videoLinks = [...document.querySelectorAll('.video-list__link')];
+	videoLinks.forEach(el => {
+		el.onclick = function(event) {
+			event.preventDefault();
+			let ItemSrc = el.dataset.src;
+			videoPopupIframe.setAttribute('src', ItemSrc);
+			showPopup(videoPopup);
+		}
+	});
+}
+ 
+

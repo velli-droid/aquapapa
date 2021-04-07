@@ -509,6 +509,9 @@
     .recommendation__subtitle {
         font-size: 25px;
     }
+    .video-popup__wrapper {
+        width: 100%;
+    }
 }
 @media (max-width: 660px) {
     body {
@@ -755,6 +758,9 @@
     }
     .contract-form {
         margin-top: 80px;
+    }
+    .video-popup__wrapper {
+        padding: 0;
     }
 }
 @media (max-width: 425px) {

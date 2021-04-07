@@ -2117,6 +2117,49 @@ th {
 .video-list__link:hover .video-list-play-btn {
     background: #177de4;
 }
+.video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 200;
+}
+.video-popup__wrapper {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    padding: 40px;
+    margin: auto;
+}
+.video-popup-frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-popup-close {
+    fill: #fff;
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 30px;
+    width: 15px;
+    z-index: 4;
+    cursor: pointer;
+}
+
 
 /* CONTRACT */
 
