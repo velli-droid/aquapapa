@@ -60,6 +60,7 @@ for (let i = 0; i < elementsWithMask.length; i++) {
 
 let forms = [...document.querySelectorAll('form')];
 if(forms.length) {
+	const cyrillicPattern = /^\p{Script=Cyrillic}+$/u;
 	forms.forEach(el => {
 		let formInputs = [...el.querySelectorAll('.form-input')];
 		let formSubmitBtn = el.querySelector('.form-button');
@@ -79,6 +80,8 @@ if(forms.length) {
 						break;	
 					default:
 						if(!input.value) {
+							input.classList.add('input_invalidated');
+						} else if(!cyrillicPattern.test(input.value)) {
 							input.classList.add('input_invalidated');
 						}
 						break;
@@ -169,6 +172,22 @@ if(videoPopup) {
 			let ItemSrc = el.dataset.src;
 			videoPopupIframe.setAttribute('src', ItemSrc);
 			showPopup(videoPopup);
+		}
+	});
+}
+
+// photo popup
+
+let photoPopup = document.querySelector('.popup-photo');
+if(photoPopup) {
+	let photoFrame = photoPopup.querySelector('img');
+	let photoLinks = [...document.querySelectorAll('.photo__link')];
+	photoLinks.forEach(el => {
+		el.onclick = function(event) {
+			event.preventDefault();
+			let ItemSrc = el.dataset.src;
+			photoFrame.setAttribute('src', ItemSrc);
+			showPopup(photoPopup);
 		}
 	});
 }

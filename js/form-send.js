@@ -7,7 +7,6 @@ if (window.FormData) {
     message.failure = showPopup;
 
     let forms = [...document.querySelectorAll('form')];
-    console.log(forms)
     // Добавляем обработчик на событие `submit`
     for(let form of forms) {
         form.addEventListener('submit', function(event) {

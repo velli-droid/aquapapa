@@ -19,17 +19,31 @@
     .about {
         padding: 90px 0 90px;
     }
-    .discount-form__inner::before {
-        display: none;
-    }
     .discount-form .consultation-form::after {
-        display: none;
+        right: -70px;
+        top: -40px;
+        width: 170px;
+        height: 170px;
+    }
+    .discount-form__inner::before {
+        width: 170px;
+        height: 170px;
     }
     .discount-form__text {
-        display: none;
+        top: 30px;
+        right: -64px;
+        font-size: 40px;
+    }  
+    .products-pic {
+        right: -335px;
     }
 }
 @media (max-width: 1200px) {
+    .discount-form .consultation-form::after,
+    .discount-form__inner::before,
+    .discount-form__text {
+        display: none;
+    }
     .about-list__item {
         max-width: 300px;
     }
@@ -810,6 +824,9 @@
     .consultation-form__subtitle {
         font-size: 18px;
         line-height: 22px;
+    }
+    .popup-photo__wrapper {
+        width: 100%;
     }
 }
 @media (max-width: 375px) {
