@@ -51,10 +51,28 @@ let validateEmail = function(email) {
 // PHONE MASK
 let elementsWithMask = document.getElementsByClassName('imaskjs__input_tel');
 for (let i = 0; i < elementsWithMask.length; i++) {
-  new IMask(elementsWithMask[i], {
-    mask: '+{7}(000)000-00-00',
-  });
+	let mask = IMask(elementsWithMask[i], {
+		mask: '+{7}(000)000-00-00',
+	});
+	elementsWithMask[i].addEventListener('keyup', function() {
+		if(mask.value == '+7(8') {
+			mask.destroy();
+			mask = IMask(elementsWithMask[i], {
+				mask: '{8}(000)000-00-00',
+			});
+			mask.value = '8('
+		}
+		if(mask.value == '8(7') {
+			mask.destroy();
+			mask = IMask(elementsWithMask[i], {
+				mask: '+{7}(000)000-00-00',
+			});
+			mask.value = '+7('
+		}
+	});
 }
+
+
 
 // form validation
 
@@ -74,9 +92,15 @@ if(forms.length) {
 						}
 						break;
 					case 'userPhone': 
-						if(input.value.length < 16) {
+						console.log(input.value[0])
+						if(input.value[0] == '+') {
+							if(input.value.length < 16) {
+								input.classList.add('input_invalidated');
+							}
+						} else if(input.value.length < 15) {
 							input.classList.add('input_invalidated');
 						}
+						
 						break;	
 					default:
 						if(!input.value) {
