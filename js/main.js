@@ -76,11 +76,22 @@ for (let i = 0; i < elementsWithMask.length; i++) {
 
 // form validation
 
+
+
 let forms = [...document.querySelectorAll('form')];
 if(forms.length) {
 	const cyrillicPattern = /^\p{Script=Cyrillic}+$/u;
 	forms.forEach(el => {
 		let formInputs = [...el.querySelectorAll('.form-input')];
+		for(let input of formInputs) {
+			let inputName = input.getAttribute('name');
+			if(inputName != 'userEmail' && inputName != 'userPhone') {
+				input.addEventListener('input', function() {
+					input.value = input.value.replace(/[a-z]/gi,'');
+
+				})
+			}
+		}
 		let formSubmitBtn = el.querySelector('.form-button');
 		let formCheckbox = el.querySelector('.form-checkbox');
 		formSubmitBtn.onclick = function(event) {

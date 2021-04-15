@@ -3,7 +3,11 @@
         display: none;
     }
     .contacts-intro__pic {
-        display: none;
+        width: 30%;
+    }
+    .contacts-intro__pic img {
+        width: 100%;
+        height: auto;
     }
     .drilling-spec-tech-pic {
         display: none;
@@ -36,6 +40,12 @@
     }  
     .products-pic {
         right: -335px;
+    }
+    .intro__pic {
+        width: 60%;
+    }
+    .contacts-intro__pic {
+        width: 39%;
     }
 }
 @media (max-width: 1200px) {
@@ -73,6 +83,9 @@
     }
     .montage-list__item:nth-child(6) {
         order: 1;
+    }
+    .contacts-intro__pic {
+        display: none;
     }
 }
 @media (max-width: 1024px) {

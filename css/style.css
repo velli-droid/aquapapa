@@ -1175,8 +1175,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .about-pic {
     position: absolute;
+    max-width: 660px;
     bottom: -235px;
     right: -173px;
+    z-index: 2;
+}
+.about-pic img {
+    width: 100%;
+    height: auto;
 }
 
 .about__title {
@@ -1993,7 +1999,7 @@ th {
 .consequence {
     position: relative;
     overflow: hidden;
-    padding: 130px 0 445px;
+    padding: 130px 0 375px;
 }
 .consequence-bg {
     position: absolute;
@@ -2081,7 +2087,7 @@ th {
 /* VIDEO */
 
 .video {
-    padding: 230px 0 108px;
+    padding: 330px 0 108px;
 }
 .video__inner {
     position: relative;
@@ -2304,6 +2310,7 @@ th {
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 20px;
+    letter-spacing: -0.1px;
 }
 .drilling-intro__location {
     margin-bottom: 29px;
@@ -2358,8 +2365,8 @@ th {
 .drilling-products-pic {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 28%;
+    right: -45px;
+    width: 35%;
     max-width: 600px;
 }
 .drilling-products-pic img {
@@ -2609,6 +2616,7 @@ th {
     display: block;
 }
 /* DRILLING PROM PAGE */
+ 
 
 .drilling-prom-intro .second-intro__pic {
     left: auto;
