@@ -12,6 +12,9 @@
     .drilling-spec-tech-pic {
         display: none;
     }
+    .about-pic {
+        right: -250px;
+    }
 }
 @media (max-width: 1440px) {
     .container {
@@ -46,6 +49,9 @@
     }
     .contacts-intro__pic {
         width: 39%;
+    }
+    .about-pic {
+        z-index: -1;
     }
 }
 @media (max-width: 1200px) {
