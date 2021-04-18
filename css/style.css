@@ -348,7 +348,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .sub-menu {
     position: absolute;
-    top: 59px;
+    top: 73px;
     left: 0;
     width: 326px;
     background-color: #fff;
@@ -975,19 +975,34 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.partners-list__link {
+    display: block;
+    width: 24%;
+    max-width: 285px;
+    min-width: 265px;
+    transition: .3s linear;
+    margin-bottom: 15px;
+}
+.partners-list__link:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .partners-list__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24%;
+    width: 100%;
+    padding: 0 15px;
     max-width: 285px;
     min-width: 265px;
     height: 152px;
     background-color: #ffffff;
     box-shadow: 0 0 62px 8px rgba(56, 69, 86, 0.03);
-    margin-bottom: 9px;
 }
-
+.partners-list__item img {
+    width: 100%;
+    height: auto;
+}
 /* CONTACTS */
 
 .section-contacts {

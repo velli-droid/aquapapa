@@ -212,9 +212,6 @@
     .partners-list {
         justify-content: space-around;
     }
-    .partners-list__item {
-        margin-bottom: 20px;
-    }
     .section-contacts {
         padding: 100px 0 100px;
     }

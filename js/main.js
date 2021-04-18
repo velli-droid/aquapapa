@@ -103,13 +103,14 @@ if(forms.length) {
 						}
 						break;
 					case 'userPhone': 
-						console.log(input.value[0])
 						if(input.value[0] == '+') {
 							if(input.value.length < 16) {
 								input.classList.add('input_invalidated');
+								console.log(input.value)
 							}
 						} else if(input.value.length < 15) {
 							input.classList.add('input_invalidated');
+							console.log(input.value)
 						}
 						
 						break;	
@@ -121,7 +122,7 @@ if(forms.length) {
 						}
 						break;
 				}
-				input.onfocus = function() {
+				input.onfocus = () => {
 					input.classList.remove('input_invalidated');
 				}
 				formCheckbox.onclick = () => {
