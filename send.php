@@ -10,8 +10,10 @@
     $mail->setLanguage('ru', 'PHPMailer/language/');
     $mail->isHTML(true);
 
-    // кому отправить
+    // от кого 
+    $mail->setFrom('admin@aquapapa.ru')
 
+    // кому отправить
     $mail->addAddress('info@aquapapa.ru');
     $mail->addAddress('andrew.griaznow@yandex.ru');
     $mail->Subject = 'Консультация';
