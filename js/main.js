@@ -106,11 +106,9 @@ if(forms.length) {
 						if(input.value[0] == '+') {
 							if(input.value.length < 16) {
 								input.classList.add('input_invalidated');
-								console.log(input.value)
 							}
 						} else if(input.value.length < 15) {
 							input.classList.add('input_invalidated');
-							console.log(input.value)
 						}
 						
 						break;	
@@ -178,10 +176,78 @@ function hidePopup(popup) {
 
 let formPopup = document.querySelector('.popup-form');
 let showPopupLinks = [...document.querySelectorAll('.show-popup__link')];
+let formPopupTitle = formPopup.querySelector('.popup-title');
+let formPopupBtn = formPopup.querySelector('.form-button');
+
+let consultationTitle = `Зкажите <span class="color-red">бесплатную</span> консультацию эксперта и мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+
+let consultationBtn = 'ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ';
+
+
+let calculateTitle = `Зкажите прямо сейчас расчет стоимости и мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+let calculateBtn = 'РАССЧИТАТЬ СТОИМОСТЬ'
+
+
+let callbackTitle = `Зкажите обратный звонок и мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+let callbackBtn = 'ЗАКАЗАТЬ ЗВОНОК';
+
+let orderTitle = `Зкажите <span class="color-red">бесплатный</span> выезд специалиста и мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+let orderBtn = 'ЗАКАЗАТЬ ВЫЕЗД';
+
+let montageSepticTitle = `Узнайте стоимость монтажа септика и мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+let montageSepticBtn = 'УЗНАТЬ СТОИМОСТЬ';
+
+let detailsTitle = `Узнайте подробности, мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+let detailsBtn = 'УЗНАТЬ СТОИМОСТЬ';
+
+let scvaginaTitle = `Зкажите <span class="color-red">бесплатную</span> консультацию по работам с вашей скважиной и мы 
+перезвоним вам в течение <span class="color-red">5 минут!</span>`;
+let scvaginaBtn = 'ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ';
 
 showPopupLinks.forEach(el => {
 	el.onclick = function(event) {
 		event.preventDefault();
+		let linkTitle = el.dataset.linkTitle;
+		switch (linkTitle) {
+			case 'consultation':
+				formPopupTitle.innerHTML = consultationTitle;
+				formPopupBtn.innerHTML = consultationBtn;
+				break;
+			case 'calculate':
+				formPopupTitle.innerHTML = calculateTitle;
+				formPopupBtn.innerHTML = calculateBtn;
+				break;
+			case 'callback':
+				formPopupTitle.innerHTML = callbackTitle;
+				formPopupBtn.innerHTML = callbackBtn;
+				break;	
+			case 'order':
+				formPopupTitle.innerHTML = orderTitle;
+				formPopupBtn.innerHTML = orderBtn;
+				break;	
+			case 'montage-septic': 
+				formPopupTitle.innerHTML = montageSepticTitle;
+				formPopupBtn.innerHTML = montageSepticBtn;
+				break;	
+			case 'scvagina': 
+				formPopupTitle.innerHTML = scvaginaTitle;
+				formPopupBtn.innerHTML = scvaginaBtn;
+				break;	
+			case 'details':	
+				formPopupTitle.innerHTML = detailsTitle;
+				formPopupBtn.innerHTML = detailsBtn;
+				break;	
+			default:
+				formPopupTitle.innerHTML = consultationTitle;
+				formPopupBtn.innerHTML = consultationBtn;
+				break;
+		}
 		showPopup(formPopup);
 	}
 });

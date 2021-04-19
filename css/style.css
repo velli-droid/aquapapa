@@ -1258,7 +1258,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     width: 30%;
     left: 0;
-    top: 290px;
+    top: 135px;
     height: 560px;
     background-color: #ffffff;
     z-index: -1;
@@ -1268,7 +1268,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     width: 40%;
     right: 0;
-    top: 455px;
+    top: 135px;
     height: 406px;
     background-color: #ffffff;
     z-index: -1;
@@ -1348,9 +1348,6 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 10px;
 }
 
-.certificates {
-    margin-top: 130px;
-}
 .certificates__titel {
     margin-bottom: 65px;
 }
@@ -1386,14 +1383,16 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
 }
 .spec-tech-list__item {
-    width: 32%;
+    width: 370px;
+    height: 330px;
     padding: 20px 18px;
     background: #fff;
     margin-bottom: 20px;
 }
 .spec-tech-list__item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -1667,6 +1666,7 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 28px;
     font-weight: 700;
     margin-left: 10px;
+    text-align: center;
 }
 .products-list__guarantee-num {
     font-size: 52px;
@@ -1790,6 +1790,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #f2f2f6;
     text-align: center;
     padding: 13px 30px;
+    transition: .3s linear;
 }
 .differences-table .row-1 .differences-table__cell:first-child {
     font-weight: 800;
@@ -1800,6 +1801,10 @@ tbody .differences-table__row:last-child .differences-table__cell:not(.differenc
 }
 th {
     font-weight: inherit;
+}
+tbody .differences-table__row:hover .differences-table__cell {
+    background: #3c98f6;
+    color: #fff;
 }
 
 /* CANALIZATION CONSULTATION FORM */
@@ -2102,7 +2107,7 @@ th {
 /* VIDEO */
 
 .video {
-    padding: 330px 0 108px;
+    padding: 330px 0 0px;
 }
 .video__inner {
     position: relative;
@@ -2284,6 +2289,7 @@ th {
     margin-top: 30px;
 }
 .contract-pic {
+    max-width: 413px;
     position: relative;
     padding: 20px 15px;
     background: #f2f2f6;

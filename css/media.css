@@ -381,13 +381,13 @@
         margin-left: 0px;
     }
     .montage-form {
-        top: -620px;
+        top: -550px;
     }
     .products-list-cards {
         justify-content: space-around;
     }
     .video {
-        padding: 370px 0 108px;
+        padding: 370px 0 0px;
     } 
     .related-products__title {
         margin-bottom: 10px;
