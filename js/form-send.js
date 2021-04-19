@@ -9,7 +9,8 @@ if (window.FormData) {
     let forms = [...document.querySelectorAll('form')];
 
     for(let form of forms) {
-        form.addEventListener('submit', async (event) => {
+        form.addEventListener('submit', formSend);
+        async function formSend(event) {
             event.preventDefault();        
             let formData = new FormData(form);
             let responce = await fetch('../send.php', {
@@ -27,7 +28,6 @@ if (window.FormData) {
             } else {
                 message.failure(errorPopup);
             }
-
-        });
+        }
     }
 }

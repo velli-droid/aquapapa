@@ -16,6 +16,8 @@
     // кому отправить
     $mail->addAddress('info@aquapapa.ru');
     $mail->addAddress('andrew.griaznow@yandex.ru');
+    $mail->addAddress('vel.boyar@gmail.com');
+    
     $mail->Subject = 'Консультация';
 
     $body = '<h1>Письмо с сайта AQUAPAPA!</h1>';
