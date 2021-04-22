@@ -1,24 +1,31 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-    
-    require 'PHPMailer/src/Exception.php'
-    require 'PHPMailer/src/PHPMailer.php'
+    // Файлы phpmailer
+    require 'phpmailer/PHPMailer.php';
+    require 'phpmailer/SMTP.php';
+    require 'phpmailer/Exception.php';
 
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->CharSet = 'UTF-8';
-    $mail->setLanguage('ru', 'PHPMailer/language/');
-    $mail->isHTML(true);
+    $mail->SMTPAuth   = true;
+    //$mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // от кого 
-    $mail->setFrom('admin@aquapapa.ru')
+    // Настройки вашей почты
+    $mail->Host = '194.61.0.8'; // SMTP сервера вашей почты
+    $mail->Username = 'karaban21'; // Логин на почте
+    $mail->Password = '4H0s5X1x'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+    $mail->setFrom('admin@aquapapa.ru'); // Адрес самой почты и имя отправителя
 
     // кому отправить
     $mail->addAddress('info@aquapapa.ru');
     $mail->addAddress('andrew.griaznow@yandex.ru');
     $mail->addAddress('vel.boyar@gmail.com');
     
-    $mail->Subject = 'Консультация';
+    
+    $mail->isHTML(true);
+    $mail->Subject = $_POST['formSubject'];
 
     $body = '<h1>Письмо с сайта AQUAPAPA!</h1>';
 

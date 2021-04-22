@@ -178,37 +178,46 @@ let formPopup = document.querySelector('.popup-form');
 let showPopupLinks = [...document.querySelectorAll('.show-popup__link')];
 let formPopupTitle = formPopup.querySelector('.popup-title');
 let formPopupBtn = formPopup.querySelector('.form-button');
+let formPopupSubject = formPopup.querySelector('.form-subject');
 
 let consultationTitle = `Зкажите <span class="color-red">бесплатную</span> консультацию эксперта и мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 
 let consultationBtn = 'ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ';
+let consultationSubject = "Консультация";
+
 
 
 let calculateTitle = `Зкажите прямо сейчас расчет стоимости и мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 let calculateBtn = 'РАССЧИТАТЬ СТОИМОСТЬ'
-
+let calculateSubject = "Рассчет стоимости";
 
 let callbackTitle = `Зкажите обратный звонок и мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 let callbackBtn = 'ЗАКАЗАТЬ ЗВОНОК';
+let callbackSubject = "Обратный звонок";
 
 let orderTitle = `Зкажите <span class="color-red">бесплатный</span> выезд специалиста и мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 let orderBtn = 'ЗАКАЗАТЬ ВЫЕЗД';
+let orderSubject = "Выезд специалиста";
 
 let montageSepticTitle = `Узнайте стоимость монтажа септика и мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 let montageSepticBtn = 'УЗНАТЬ СТОИМОСТЬ';
+let montageSubject = "Стоимость монтажа";
+
 
 let detailsTitle = `Узнайте подробности, мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 let detailsBtn = 'УЗНАТЬ СТОИМОСТЬ';
+let detailsSubject = "Узнать подробности";
 
 let scvaginaTitle = `Зкажите <span class="color-red">бесплатную</span> консультацию по работам с вашей скважиной и мы 
 перезвоним вам в течение <span class="color-red">5 минут!</span>`;
 let scvaginaBtn = 'ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ';
+let scvaginaSubject = "Консультация по работе со скважиной";
 
 showPopupLinks.forEach(el => {
 	el.onclick = function(event) {
@@ -218,34 +227,42 @@ showPopupLinks.forEach(el => {
 			case 'consultation':
 				formPopupTitle.innerHTML = consultationTitle;
 				formPopupBtn.innerHTML = consultationBtn;
+				formPopupSubject.value = consultationSubject;
 				break;
 			case 'calculate':
 				formPopupTitle.innerHTML = calculateTitle;
 				formPopupBtn.innerHTML = calculateBtn;
+				formPopupSubject.value = calculateSubject;
 				break;
 			case 'callback':
 				formPopupTitle.innerHTML = callbackTitle;
 				formPopupBtn.innerHTML = callbackBtn;
+				formPopupSubject.value = callbackSubject;
 				break;	
 			case 'order':
 				formPopupTitle.innerHTML = orderTitle;
 				formPopupBtn.innerHTML = orderBtn;
+				formPopupSubject.value = orderSubject;
 				break;	
 			case 'montage-septic': 
 				formPopupTitle.innerHTML = montageSepticTitle;
 				formPopupBtn.innerHTML = montageSepticBtn;
+				formPopupSubject.value = montageSubject;
 				break;	
 			case 'scvagina': 
 				formPopupTitle.innerHTML = scvaginaTitle;
 				formPopupBtn.innerHTML = scvaginaBtn;
+				formPopupSubject.value = scvaginaSubject;
 				break;	
 			case 'details':	
 				formPopupTitle.innerHTML = detailsTitle;
 				formPopupBtn.innerHTML = detailsBtn;
+				formPopupSubject.value = detailsSubject;
 				break;	
 			default:
 				formPopupTitle.innerHTML = consultationTitle;
 				formPopupBtn.innerHTML = consultationBtn;
+				formPopupSubject.value = consultationSubject;
 				break;
 		}
 		showPopup(formPopup);
@@ -294,4 +311,36 @@ if(photoPopup) {
 	});
 }
  
-
+// table
+let differencesTable = document.querySelector('.differences-table');
+if(differencesTable) {
+	tableRows = differencesTable.querySelectorAll('.differences-table__row');
+	tableCols = [];
+	let tableFirstRow = tableRows[0];
+	let tableFirstRowCells = tableFirstRow.querySelectorAll('.differences-table__cell');
+	tableFirstRowCells.forEach(element => {
+		let tableCol = [];
+		tableCols.push(tableCol);
+	});
+	for(let i = 0; i < tableRows.length; i++) {
+		let tableRow = tableRows[i];
+		let tableRowCells = tableRow.querySelectorAll('.differences-table__cell');
+		for(let j = 0; j < tableRowCells.length; j++) {
+			tableCols[j].push(tableRowCells[j])
+		}
+	}
+	tableCols.forEach(element => {
+		element.forEach(colItem => {
+			colItem.onmouseover = function() {
+				for(cell of element) {
+					cell.classList.add('_hover');
+				}
+			}
+			colItem.onmouseout = function() {
+				for(cell of element) {
+					cell.classList.remove('_hover');
+				}
+			}
+		});
+	});
+}

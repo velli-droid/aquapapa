@@ -282,7 +282,7 @@
             <div class="drilling-intro__inner second-intro__inner">
                 <div class="second-intro__title drilling-intro__title">
                     <h1>Пробурим скважину за <span class="white-bg color-red">1 день</span> для дома или дачи с гарантией 
-                        по договору на бурение и обустройство до  <span class="white-bg color-red">3 лет</span></h1>
+                        по договору на бурение и обустройство до  <span class="white-bg color-red">3х лет</span></h1>
                 </div>
                 <div class="second-intro-location drilling-intro__location">
                     <div class="second-intro-location__icon">
@@ -334,8 +334,8 @@
                     </div>
                     <div class="second-intro-consultation__text">
                         При звонке: <br>
-                        - Поможем подобрать оптимальный септик <br>
-                        - Подготовим проект и предварительную смету
+                        - Проконсультируем и ответим на самые важные вопросы <br>
+                        - Подготовим предварительный расчет бурения
                     </div>
                 </div>
             </div>
@@ -346,10 +346,13 @@
             <div class="discount-form__inner">
                 <div class="consultation-form">
                     <div class="consultation-form__title">
-                        Закажите Бурение и Обустройство — <br>
-                        получите скидку <span class="white-bg color-red">15%</span> на монтажные работы
+                        Закажите Бурение и Обустройство скважины — <br>
+                        получить <span class="white-bg color-red">15%</span> скидку на монтажные работы
                     </div>
                     <form action="#" class="discount">
+                        <div class="form-marker">
+                            <input type="text" name="formSubject" class="form-subject hidden-input" value="Скидка бурение дом" readonly>
+                        </div>
                         <div class="form-group">
                             <input type="text" name="userPhone" class="form-input imaskjs__input_tel" id="discountPhone" placeholder=" ">
                             <label for="discountPhone" class="form-label">Введите ваш телефон:</label>
@@ -556,7 +559,7 @@
                     <h2>Как происходит бурение скважины на воду?</h2>
                 </div>
                 <div class="montage__text">
-                    Мы подготовили БАЗОВЫЕ этапы по монтажу септика за <span class="color-red"><b>1 день</b></span> 
+                    Мы подготовили БАЗОВЫЕ этапы по бурению скважины за <span class="color-red"><b>1 день</b></span> 
                 </div>
                 <div class="montage-list">
                     <div class="montage-list__item">
@@ -571,7 +574,7 @@
                         <div class="montage-list__bottom">
                             <div class="montage-list__text">
                                 Заявка на расчет и выезд 
-                                специалиста на место работ
+                                инженера на объект
                             </div>
                         </div>
                         <div class="montage-list-btn">
@@ -761,6 +764,9 @@
                         узнайте за  <span class="white-bg color-red"><b>5 минут</b></span> на какую глубину можно пробурить именно в вашем районе!
                     </div>
                     <form action="send.php" method="POST" class="consultation">
+                        <div class="form-marker">
+                            <input type="text" name="formSubject" class="form-subject hidden-input" value="Консультация скважина дом" readonly>
+                        </div>
                         <div class="form-group">
                             <input type="text" name="userPhone" class="form-input imaskjs__input_tel" id="drillingPhone" placeholder=" ">
                             <label for="drillingPhone" class="form-label">Введите ваш телефон:</label>
@@ -966,6 +972,9 @@
                         Закажите прямо сейчас бурение скважины в нашей компании под "ключ"
                     </div>
                     <form action="send.php" method="POST" class="consultation">
+                        <div class="form-marker">
+                            <input type="text" name="formSubject" class="form-subject hidden-input" value="Заказать бурение дом" readonly>
+                        </div>
                         <div class="form-group">
                             <input type="text" name="userName" class="form-input" id="consName" placeholder=" ">
                             <label for="consName" class="form-label">Введите ваше имя:</label>
@@ -1019,6 +1028,9 @@
                         <span class="color-blue">- Напишите!</span> 
                     </div>
                     <form method="POST" action="send.php" class="question-form">
+                        <div class="form-marker">
+                            <input type="text" name="formSubject" class="form-subject hidden-input" value="Вопрос" readonly>
+                        </div>
                         <div class="form-group">
                             <input type="text" name="userName" class="form-input" id="questionName" placeholder=" ">
                             <label for="questionName" class="form-label">Введите ваше имя:</label>
@@ -1137,6 +1149,9 @@
             </div>
             <div class="popup-form__content">
                 <form action="send.php" method="POST" class="consultation">
+                    <div class="form-marker">
+                        <input type="text" name="formSubject" class="form-subject hidden-input">
+                    </div>
                     <div class="form-group">
                         <input type="text" name="userName" class="form-input" id="popupName" placeholder=" ">
                         <label for="popupName" class="form-label">Введите ваше имя:</label>

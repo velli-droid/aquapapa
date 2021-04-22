@@ -891,6 +891,9 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 17px;
     padding: 17px 18px;
 }
+.form-marker {
+    display: none;
+}
 .form-input.input_invalidated {
     border: 1px solid #f94141 !important;
 }
@@ -1520,9 +1523,6 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 20px;
     text-shadow: 0 0 40px rgba(0, 0, 0, 1);
 }
-.canalization-intro {
-    background:  #79d6fe;
-}
 .canalization-intro__title {
     margin-bottom: 20px;
 }
@@ -1802,8 +1802,9 @@ tbody .differences-table__row:last-child .differences-table__cell:not(.differenc
 th {
     font-weight: inherit;
 }
-tbody .differences-table__row:hover .differences-table__cell {
-    background: #3c98f6;
+
+.differences-table__cell._hover {
+    background: #3c97f5;
     color: #fff;
 }
 
@@ -2288,7 +2289,10 @@ tbody .differences-table__row:hover .differences-table__cell {
 .contract-text-btn {
     margin-top: 30px;
 }
-.contract-pic {
+.contract-text-btn .page-btn__link {
+    padding: 15px 29px;
+}
+.contract-pic { 
     max-width: 413px;
     position: relative;
     padding: 20px 15px;
